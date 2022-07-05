@@ -1,6 +1,8 @@
 # clinic-assessment
  Clinic project assessment
 
+*** Some additional tasks have been included in the BONUS folder ***
+
  Port = 8090
  Prefix to endpoint = /api
  _________________________________________________________________________________________________________________________________
