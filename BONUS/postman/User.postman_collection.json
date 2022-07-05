@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "745be2a6-89e1-48f9-9df3-bb549477429b",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"alfred_ca@hotmail.com\",\r\n    \"password\":\"cxunicorn\",\r\n    \"firstName\":\"alfred\",\r\n    \"lastName\":\"adams\",\r\n    \"dateOfBirth\":\"1989-01-27\",\r\n    \"nationality\":\"american\",\r\n    \"gender\":\"m\",\r\n    \"phoneCountryCode\":\"971\",\r\n    \"phoneNumber\":\"588329942\",\r\n    \"roles\":[\"clinic admin\"],\r\n    \"employee\":{\r\n        \"phoneExt\":\"4405\",\r\n        \"workStartTimes\":[\"08:00\"],\r\n        \"workEndTimes\":[\"17:00\"],\r\n        \"specialty\":\"gastroenterologist\"\r\n    },\r\n    \"patient\":{\r\n        \"bloodType\":\"AB-\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "alfred_ca@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "cxunicorn",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

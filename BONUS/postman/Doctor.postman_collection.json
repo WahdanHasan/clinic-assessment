@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "8c80e09e-5ab0-4e56-8f2c-f6a8dedaffd6",
+		"name": "Doctor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List of Doctors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/doctors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"doctors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doctor information",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/doctors/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"doctors",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doctor available slots",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/doctors/3/slots?date=2022-07-05",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"doctors",
+						"3",
+						"slots"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2022-07-05"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All doctor available slots",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/doctors/all/slots?date=2022-07-05",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"doctors",
+						"all",
+						"slots"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2022-07-05"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doctors with most appointments by date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/doctors/busy/2022-07-05",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"doctors",
+						"busy",
+						"2022-07-05"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doctors with more appointments than a specified hour",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/doctors/busy/2022-07-05/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"doctors",
+						"busy",
+						"2022-07-05",
+						"0"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGZyZWRfY2FAaG90bWFpbC5jb20iLCJyb2xlcyI6WyJhcHBvaW50bWVudC1jYW5jZWwiLCJ2aWV3LWFsbC1kb2N0b3JzLWF2YWlsYWJsZS1zbG90cyIsInZpZXctYWxsLWRvY3RvcnMtYnVzeS1ieS1kYXRlIiwidmlldy1hbGwtZG9jdG9ycy1idXN5LWJ5LWhvdXJzIiwidmlldy1kb2N0b3ItYXZhaWxhYmxlLXNsb3RzIl0sImlzcyI6ImN4dW5pY29ybi1hc3Nlc3NtZW50LXNlcnZpY2UiLCJleHAiOjE2NTcwNTYyMDl9.TejyxN5pMm3OVCogJREe070QpUSgFubjPY0Amh9SZgs",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

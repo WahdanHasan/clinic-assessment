@@ -1,0 +1,29 @@
+
+type Query {
+    allUsers : [User]
+}
+
+type User {
+    id : ID!
+    email : String!
+    firstName : String!
+    lastName : String
+    dateOfBirth : String
+    nationality : String
+    gender : String
+    phoneCountryCode : String!
+    phoneNumber : String!
+    userRoles : [UserRole]
+}
+
+type UserRole {
+    id : ID!
+    role : [Role]
+}
+
+type Role {
+    id : ID!
+    roleName : String!
+    roleDesc : String
+}
+

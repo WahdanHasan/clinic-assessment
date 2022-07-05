@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "987d5fad-928e-48d3-9f3e-f2d8eee162e6",
+		"name": "Appointment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Book appointment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\":{\r\n        \"patientId\":4,\r\n        \"doctorId\":3,\r\n        \"appointmentDate\":\"2022-07-05\",\r\n        \"appointmentTimeStart\":\"08:00\",\r\n        \"appointmentTimeEnd\":\"10:00\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/appointment/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"appointment",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel appointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/appointment/17/cancel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"appointment",
+						"17",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Appointment details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/appointment/7/details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"appointment",
+						"7",
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patient appointment history",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lQG1heWZpZWxkY2xpbmljLmNvbSIsInJvbGVzIjpbImFwcG9pbnRtZW50LWNhbmNlbCIsInZpZXctYWxsLWRvY3RvcnMtYXZhaWxhYmxlLXNsb3RzIiwidmlldy1hbGwtZG9jdG9ycy1idXN5LWJ5LWRhdGUiLCJ2aWV3LWFsbC1kb2N0b3JzLWJ1c3ktYnktaG91cnMiLCJ2aWV3LWFwcG9pbnRtZW50LWRldGFpbHMiLCJ2aWV3LWRvY3Rvci1hdmFpbGFibGUtc2xvdHMiLCJ2aWV3LXBhdGllbnQtYXBwb2ludG1lbnQtaGlzdG9yeSJdLCJpc3MiOiJjeHVuaWNvcm4tYXNzZXNzbWVudC1zZXJ2aWNlIiwiZXhwIjoxNjU2ODYxOTQ5fQ.uw1bAdn78ttifNz6DTBRRAd6hfr5f8e93KgrOaIg71M",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8090/api/appointment/all?patient_id=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"appointment",
+						"all"
+					],
+					"query": [
+						{
+							"key": "patient_id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGZyZWRfY2FAaG90bWFpbC5jb20iLCJyb2xlcyI6WyJhcHBvaW50bWVudC1jYW5jZWwiLCJ2aWV3LWFsbC1kb2N0b3JzLWF2YWlsYWJsZS1zbG90cyIsInZpZXctYWxsLWRvY3RvcnMtYnVzeS1ieS1kYXRlIiwidmlldy1hbGwtZG9jdG9ycy1idXN5LWJ5LWhvdXJzIiwidmlldy1kb2N0b3ItYXZhaWxhYmxlLXNsb3RzIl0sImlzcyI6ImN4dW5pY29ybi1hc3Nlc3NtZW50LXNlcnZpY2UiLCJleHAiOjE2NTcwNTYyMDl9.TejyxN5pMm3OVCogJREe070QpUSgFubjPY0Amh9SZgs",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
