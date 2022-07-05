@@ -9,11 +9,11 @@
 | /register                      | PUT       | Allow all users to register                                 | All                  |
 | /login                         | POST      | Allow users to login                                        | All                  |
 | /doctors                       | GET       | View list of doctors                                        | All                  |
-| /doctors/id                    | GET       | View Doctor information                                     | All                  |
-| /doctors/{id}/slots            | GET       | View Doctors available slots                                | Doctor, Patient, CA  |
+| /doctors/{id}                  | GET       | View Doctor information                                     | All                  |
+| /doctors/{id}/slots?date=      | GET       | View Doctors available slots                                | Doctor, Patient, CA  |
 | /appointment/book              | PUT       | Book an appointment with a doctor                           | Patient              |
 | /appointment/cancel            | POST      | Cancel appointment                                          | Doctor, CA           |
-| /doctors/all/slots             | GET       | View availability of all Doctors                            | Doctor, Patient, CA  |
+| /doctors/all/slots?date=       | GET       | View availability of all Doctors                            | Doctor, Patient, CA  |
 | /appointment/{id}/details      | GET       | View appointment details                                    | Doctor, Patient      |
 | /appointment/all?patient_id=   | GET       | View patient appointment history                            | Doctor, Patient      |
 | /doctors/busy/{date}           | GET       | View doctors with the most appointments in a given day      | CA                   |
